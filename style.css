@@ -146,3 +146,11 @@
 @media(max-width:1100px){.freedom-logo-header{width:165px}}
 @media(max-width:990px){.freedom-logo-header{width:182px}}
 @media(max-width:650px){.freedom-logo-header{width:148px}.hero-logo-wrap{margin:15px 0 6px;padding:0}.freedom-logo-hero{width:100%}.hero-copy .hero-logo-wrap+h1{margin-top:18px}.footer-logo .freedom-logo-footer{width:205px}}
+
+/* Identidade oficial: usar imagem original de alta resolução; sem redesenho e sem filtros de nitidez artificiais */
+.freedom-logo-header,.footer-logo .freedom-logo-footer,.freedom-logo-hero{filter:none!important;image-rendering:auto}
+.freedom-logo-header{width:clamp(175px,17vw,210px)}
+.footer-logo .freedom-logo-footer{width:clamp(200px,22vw,275px)}
+.hero-logo-wrap{width:min(790px,100%);max-width:100%;padding:0;margin:15px 0 8px}
+.freedom-logo-hero{width:100%;object-fit:contain}
+@media(max-width:650px){.freedom-logo-header{width:158px}.footer-logo .freedom-logo-footer{width:220px}.hero-logo-wrap{width:100%;margin:12px 0 10px}}
