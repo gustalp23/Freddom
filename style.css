@@ -117,3 +117,17 @@
 @media (max-width:990px){.menu-toggle{display:block;margin-left:auto}.nav{display:none;position:absolute;top:76px;left:0;right:0;padding:18px 20px 30px;background:#190a14;border-bottom:1px solid #ffffff2e;box-shadow:0 16px 30px #0003;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav>a{padding:15px;border-bottom:1px solid #ffffff1b;font-size:14px}.nav .nav-primary{text-align:center;padding:16px;margin-top:18px}}
 @media (max-width:850px){.nav{top:76px}}
 @media (max-width:600px){.nav{top:84px}.kit-artframe{border-radius:8px}.kit-showcase{padding-top:28px}}
+
+/* Freedom - area de cadastro experimental 2026 */
+.signup-test-portal{background:linear-gradient(123deg,#260310,#600b2b 58%,#320617);color:#fff;position:relative;overflow:hidden}
+.signup-test-portal:before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(156deg,transparent 0 160px,#ffffff0b 162px,transparent 165px)}
+.signup-test-inner{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.signup-test-inner h2{font:italic 900 clamp(58px,6.5vw,100px)/.9 var(--serif);margin:15px 0 23px}
+.signup-test-inner h2 em{font-style:inherit;background:linear-gradient(170deg,#fff,#a89aa6 48%,#f9f1f6 70%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.signup-test-inner p{max-width:560px;color:#ead1dc;line-height:1.85;margin:0 0 27px}
+.signup-test-portal .button-primary{background:#f5ebef;color:#421122;border-color:#f5ebef}
+.signup-test-visual{border:1px solid #d8bbca77;min-height:320px;padding:34px;background:linear-gradient(145deg,#ffffff13,#14010880);box-shadow:0 23px 60px #13000c66;display:flex;flex-direction:column;justify-content:space-between;transform:skewX(-2deg)}
+.signup-test-visual small,.signup-test-visual span{font-size:11px;font-weight:900;letter-spacing:.15em;color:#edccda}
+.signup-test-visual strong{font:italic 900 clamp(61px,8vw,112px)/.85 var(--serif);color:#fff}
+@media(max-width:800px){.signup-test-inner{grid-template-columns:1fr}.signup-test-visual{min-height:200px}.signup-test-visual strong{font-size:67px}}
+@media(max-width:590px){.signup-test-visual{padding:23px}.signup-test-inner h2{font-size:clamp(53px,12vw,75px)}.signup-test-portal .button{width:100%;text-align:center;font-size:11px}}
