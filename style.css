@@ -172,3 +172,66 @@ body{background:var(--paper);overflow-x:hidden}
 @media(max-width:820px){.hero{display:block;min-height:0}.hero-content{padding:68px 24px 22px}.event-art-card{position:relative;inset:auto;transform:none;width:min(430px,calc(100% - 48px));margin:12px auto 42px;rotate:0deg}.page-hero{min-height:290px}.nav-links .nav-cta{margin-left:0}}
 @media(max-width:640px){.hero h1{font-size:clamp(2.55rem,12vw,3.8rem)}.hero-content{padding-top:52px}.hero-meta{gap:8px}.hero-meta span{font-size:.82rem}.page-hero{min-height:255px;padding:55px 20px}.page-hero h1{font-size:clamp(2.15rem,10vw,3.2rem)}.card{border-radius:18px}.gallery-tile{border-radius:16px}.event-art-card small{font-size:.59rem}.callout{padding:26px 20px}.photo-panel{min-height:300px}}
 @media(prefers-reduced-motion:reduce){.card{transition:none}}
+
+/* FREEDOM — acabamento refinado para a versão pública */
+.event-art-card{display:none!important}
+.hero{min-height:660px;background-position:center 45%}
+.hero-content{padding-right:24px;max-width:1180px}
+.hero:before{background:linear-gradient(90deg,rgba(15,5,11,.97) 0%,rgba(31,7,19,.92) 32%,rgba(46,10,25,.64) 59%,rgba(22,6,14,.24) 100%)}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.23);border-radius:50px;padding:9px 16px;font-weight:800;backdrop-filter:blur(9px)}
+.hero h1{max-width:920px;font-size:clamp(3rem,6.3vw,6.3rem);line-height:1.04;letter-spacing:-.065em}
+.hero p{max-width:575px;font-size:1.12rem;line-height:1.8}
+.hero .actions .btn-light{background:linear-gradient(125deg,#fff,#eadde3);box-shadow:0 12px 34px rgba(0,0,0,.26)}
+.hero .actions .btn-ghost{border:1px solid rgba(255,255,255,.55)}
+.hero-meta{margin-top:26px}
+.sponsor-section,.sponsor-placeholder{display:none}
+.experience-guide{background:#fff}
+.journey-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.journey-step{background:linear-gradient(155deg,#fff,#faf2f5);border:1px solid #e7d5dd;border-radius:23px;padding:28px;min-height:260px;box-shadow:0 14px 35px rgba(50,10,25,.07);display:flex;flex-direction:column;gap:15px;transition:transform .25s ease,box-shadow .25s ease}
+.journey-step:hover{transform:translateY(-4px);box-shadow:0 22px 45px rgba(50,10,25,.14)}
+.journey-number{font-family:Montserrat,sans-serif;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#511329,#872b4b);color:white;border-radius:13px;width:50px;height:50px;font-weight:900;font-size:1.25rem;letter-spacing:-.03em}
+.journey-step h3{color:#59162e;font-size:1.15rem;font-weight:900;margin:3px 0 11px}
+.journey-step p{margin:0 0 16px;color:#67555e}
+.journey-step .text-link{margin-top:auto}
+.faq-section{background:#f6eef1}
+.faq{max-width:1040px}
+.faq-item{padding:0 22px}
+.faq-question{padding:22px 2px;font-weight:800}
+.faq-plus{font-size:1.45rem;color:#993954}
+.inscription-steps{background:#f8eff3}
+.inscription-next{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:#2c0b19;color:#f8eef2;border-radius:23px;padding:26px 30px}
+.inscription-next p{margin:0;max-width:590px}
+.inscription-next .btn{background:#fff;color:#431526}
+.gallery-tile{background:linear-gradient(140deg,#270817,#6e1b3d)}
+.gallery-tile img{min-height:100%;object-fit:cover}
+.photo-panel{background-color:#390e20}
+.contact-card .btn{align-self:flex-start}
+.site-footer{margin-top:0}
+@media(max-width:900px){.journey-grid{grid-template-columns:1fr 1fr}.hero{min-height:600px}}
+@media(max-width:680px){
+ .hero{min-height:0;background-position:60% center}
+ .hero:before{background:linear-gradient(90deg,rgba(20,6,13,.93),rgba(37,9,22,.73))}
+ .hero-content{padding:65px 22px 74px!important;max-width:100%}
+ .hero h1{font-size:clamp(2.7rem,10vw,4rem);max-width:100%;overflow-wrap:break-word}
+ .hero p{font-size:1rem;line-height:1.72}
+ .hero .eyebrow{font-size:.65rem;letter-spacing:.1em;line-height:1.4}
+ .hero-meta{gap:8px}
+ .hero-meta span{padding:8px 10px;font-size:.77rem}
+ .hero .actions{display:grid;grid-template-columns:1fr}
+ .hero .actions .btn{width:100%;padding:15px 13px;font-size:.95rem}
+ .journey-grid{grid-template-columns:1fr}
+ .journey-step{min-height:0;padding:24px}
+ .countdown-inner h2{font-size:1.15rem}
+ .countdown-band{padding:28px 16px}
+ .timer{width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+ .time-box{min-width:0;padding:10px 4px}
+ .time-box strong{font-size:clamp(1.15rem,5vw,1.6rem)}
+ .time-box span{font-size:.62rem}
+ .section{padding:58px 20px}
+ .section h2,.section-head h2{font-size:clamp(1.8rem,7vw,2.55rem)}
+ .whatsapp-float{font-size:.86rem;right:13px;bottom:12px;padding:12px 15px}
+ .faq-question{font-size:.98rem}
+ .callout{border-radius:20px}
+ .inscription-next{padding:24px}
+ .inscription-next .btn{width:100%}
+}
