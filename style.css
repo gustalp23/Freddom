@@ -132,7 +132,7 @@
 .instagram-contact-art svg{width:100%;height:auto}
 @media(max-width:730px){.instagram-contact-card{gap:20px;padding:35px 25px}.instagram-contact-art{width:120px;opacity:.32;position:absolute;right:0;top:15px}.instagram-contact-name{font-size:clamp(57px,12vw,83px)}.instagram-contact-desc{font-size:13px}.instagram-contact-left{gap:18px}.instagram-contact-overline{font-size:9px;letter-spacing:.14em}}
 
-/* Logomarca oficial Freedom (reproduzida em SVG a partir da arte de referência) */
+/* Logomarca original Freedom enviada pelo usuario - somente recorte e fundo transparente */
 .brand{display:inline-flex;align-items:center;justify-content:flex-start;min-width:0;flex-shrink:0}
 .freedom-logo{display:block;height:auto;object-fit:contain;object-position:center center;max-width:100%;user-select:none}
 .freedom-logo-header{width:clamp(150px,15vw,190px);filter:drop-shadow(0 2px 8px rgba(0,0,0,.22))}
