@@ -131,3 +131,18 @@
 .instagram-contact-art{position:relative;z-index:1;display:block;width:clamp(145px,22vw,255px);flex:0 0 auto;color:#f2cfde;opacity:.85;filter:drop-shadow(0 15px 25px #17040e6f)}
 .instagram-contact-art svg{width:100%;height:auto}
 @media(max-width:730px){.instagram-contact-card{gap:20px;padding:35px 25px}.instagram-contact-art{width:120px;opacity:.32;position:absolute;right:0;top:15px}.instagram-contact-name{font-size:clamp(57px,12vw,83px)}.instagram-contact-desc{font-size:13px}.instagram-contact-left{gap:18px}.instagram-contact-overline{font-size:9px;letter-spacing:.14em}}
+
+/* Logomarca oficial Freedom (reproduzida em SVG a partir da arte de referência) */
+.brand{display:inline-flex;align-items:center;justify-content:flex-start;min-width:0;flex-shrink:0}
+.freedom-logo{display:block;height:auto;object-fit:contain;object-position:center center;max-width:100%;user-select:none}
+.freedom-logo-header{width:clamp(150px,15vw,190px);filter:drop-shadow(0 2px 8px rgba(0,0,0,.22))}
+.footer-logo{display:inline-flex;align-items:center;max-width:100%}
+.footer-logo .freedom-logo-footer{width:clamp(175px,18vw,255px);height:auto;filter:drop-shadow(0 4px 12px rgba(0,0,0,.25));transform:none}
+.hero-logo-wrap{position:relative;width:min(750px,100%);max-width:100%;margin:16px 0 10px;padding:0}
+.freedom-logo-hero{width:100%;height:auto;filter:drop-shadow(0 9px 23px rgba(0,0,0,.42))}
+.hero-campaign{margin-top:0}
+.hero-campaign>span{display:inline-block;margin-bottom:9px}
+.hero-copy .hero-logo-wrap+h1{margin-top:17px}
+@media(max-width:1100px){.freedom-logo-header{width:165px}}
+@media(max-width:990px){.freedom-logo-header{width:182px}}
+@media(max-width:650px){.freedom-logo-header{width:148px}.hero-logo-wrap{margin:15px 0 6px;padding:0}.freedom-logo-hero{width:100%}.hero-copy .hero-logo-wrap+h1{margin-top:18px}.footer-logo .freedom-logo-footer{width:205px}}
