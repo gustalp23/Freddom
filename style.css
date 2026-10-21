@@ -154,3 +154,46 @@
 .hero-logo-wrap{width:min(790px,100%);max-width:100%;padding:0;margin:15px 0 8px}
 .freedom-logo-hero{width:100%;object-fit:contain}
 @media(max-width:650px){.freedom-logo-header{width:158px}.footer-logo .freedom-logo-footer{width:220px}.hero-logo-wrap{width:100%;margin:12px 0 10px}}
+
+/* AJUSTE DE PROPORÇÃO DA LOGO OFICIAL — 21/10/2026
+   Mantém a arte original, sem distorções, brilhos artificiais ou ampliação exagerada */
+.brand,.footer-logo{flex:0 0 auto;overflow:visible}
+.freedom-logo,
+.freedom-logo-header,
+.freedom-logo-hero,
+.footer-logo .freedom-logo-footer{
+  display:block;
+  max-width:100%;
+  height:auto !important;
+  object-fit:contain !important;
+  object-position:center;
+  transform:none !important;
+  filter:none !important;
+  mix-blend-mode:normal;
+}
+.freedom-logo-header{width:clamp(140px,12vw,175px);opacity:.84}
+.footer-logo .freedom-logo-footer{width:clamp(165px,17vw,215px);opacity:.84}
+.hero-logo-wrap{
+  display:block;
+  width:min(560px,67%);
+  max-width:100%;
+  padding:0;
+  margin:16px 0 17px;
+}
+.freedom-logo-hero{width:100%;opacity:.83}
+.hero-copy .hero-logo-wrap+h1{margin-top:22px}
+@media(max-width:990px){
+ .freedom-logo-header{width:155px}
+ .hero-logo-wrap{width:min(475px,72%)}
+}
+@media(max-width:650px){
+ .freedom-logo-header{width:136px}
+ .footer-logo .freedom-logo-footer{width:180px}
+ .hero-logo-wrap{width:min(350px,78%);margin:7px auto 20px}
+ .hero-copy .hero-logo-wrap+h1{margin-top:16px}
+ .hero-campaign{text-align:left}
+}
+@media(max-width:380px){
+ .freedom-logo-header{width:128px}
+ .hero-logo-wrap{width:77%}
+}
