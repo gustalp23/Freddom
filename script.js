@@ -1,71 +1,32 @@
-const menuButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
-if (menuButton && nav) {
-  menuButton.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(open));
-    menuButton.textContent = open ? 'Fechar ✕' : '☰ Menu';
-  });
-}
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const answer = document.getElementById(button.getAttribute('aria-controls'));
-    const expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!expanded));
-    answer.hidden = expanded;
-    const icon = button.querySelector('.faq-plus');
-    if (icon) icon.textContent = expanded ? '+' : '−';
-  });
-});
-const countdown = document.querySelector('[data-countdown]');
-if (countdown) {
-  const eventDate = new Date('2026-11-15T09:00:00-03:00').getTime();
-  const update = () => {
-    const diff = eventDate - Date.now();
-    if (diff <= 0) {
-      countdown.innerHTML = '<div class="time-box" style="min-width:220px"><strong>Chegou o dia!</strong><span>Etapa Freedom 2026</span></div>';
-      return;
-    }
-    const units = [
-      ['days', Math.floor(diff / 86400000)],
-      ['hours', Math.floor((diff % 86400000) / 3600000)],
-      ['minutes', Math.floor((diff % 3600000) / 60000)],
-      ['seconds', Math.floor((diff % 60000) / 1000)]
-    ];
-    units.forEach(([key, value]) => {
-      const el = countdown.querySelector(`[data-${key}]`);
-      if (el) el.textContent = String(value).padStart(2, '0');
+(() => {
+  'use strict';
+  const toggle=document.querySelector('.menu-toggle');
+  const nav=document.querySelector('#main-nav');
+  if(toggle&&nav){
+    const close=()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');};
+    toggle.addEventListener('click',()=>{const opened=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(opened));});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+  }
+  document.querySelectorAll('.faq-question').forEach(button=>{
+    button.addEventListener('click',()=>{
+      const answer=document.getElementById(button.getAttribute('aria-controls'));if(!answer)return;
+      const was=button.getAttribute('aria-expanded')==='true';
+      button.setAttribute('aria-expanded',String(!was));answer.hidden=was;
+      const sign=button.querySelector('b');if(sign)sign.textContent=was?'+':'−';
     });
-  };
-  update();
-  setInterval(update, 1000);
-}
-const backTop = document.querySelector('.back-top');
-if (backTop) {
-  window.addEventListener('scroll', () => backTop.classList.toggle('show', window.scrollY > 450));
-  backTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-}
-const participantSearch = document.querySelector('#participant-search');
-if (participantSearch) {
-  participantSearch.addEventListener('input', () => {
-    const message = document.querySelector('#participant-search-message');
-    message.textContent = 'A lista pública oficial de participantes não foi disponibilizada neste site. Consulte sua inscrição na plataforma oficial.';
   });
-}
-
-
-/* Melhorias de experiência e acessibilidade */
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', () => {
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      if (menuButton) {
-        menuButton.setAttribute('aria-expanded', 'false');
-        menuButton.textContent = '☰ Menu';
-      }
-    }
-  });
-});
-document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-  img.addEventListener('error', () => { img.style.display = 'none'; });
-});
+  const timer=document.querySelector('[data-countdown]');
+  if(timer){
+    const target=new Date('2026-11-15T09:00:00-03:00').getTime();
+    const update=()=>{
+      const diff=Math.max(0,target-Date.now());
+      if(diff===0){timer.innerHTML='<span class="countdown-complete">CHEGOU O GRANDE DIA!</span>';return true;}
+      const values={days:Math.floor(diff/86400000),hours:Math.floor(diff%86400000/3600000),minutes:Math.floor(diff%3600000/60000),seconds:Math.floor(diff%60000/1000)};
+      Object.entries(values).forEach(([name,value])=>{const el=timer.querySelector('[data-'+name+']');if(el)el.textContent=String(value).padStart(2,'0');});return false;
+    };
+    if(!update()){const interval=setInterval(()=>{if(update())clearInterval(interval);},1000);}
+  }
+  const back=document.querySelector('.back-to-top');
+  if(back){const update=()=>back.classList.toggle('visible',window.scrollY>550);window.addEventListener('scroll',update,{passive:true});update();back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
+})();
