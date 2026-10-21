@@ -106,3 +106,14 @@
 /* Banner de identidade visual da corrida, sem representação de igreja não verificada */
 .statement-photo{background:linear-gradient(90deg,rgba(22,0,9,.62),rgba(39,0,14,.32)),url('assets/freedom-banner.svg') center /cover no-repeat}
 @media(max-width:650px){.statement-photo{background-position:center;background-size:cover}.statement-inner h2{font-size:clamp(63px,14vw,95px)}}
+
+/* Kit do atleta — imagem de apresentação em formato panorâmico */
+.kit-showcase{padding-top:48px}
+.kit-artframe{background:#1b0612;border:1px solid #a74768;box-shadow:0 24px 70px rgba(10,0,5,.5);border-radius:12px;overflow:hidden}
+.kit-artframe img{display:block;width:100%;height:auto;aspect-ratio:1400/788;object-fit:contain}
+.kit-home-art img{width:100%;height:auto;aspect-ratio:1400/788;object-fit:cover}
+.nav>a[aria-current="page"]{color:#f1b7c8}
+@media (max-width:1100px){.nav{gap:10px}.nav>a{font-size:10px}.nav .nav-primary{padding:12px 10px}}
+@media (max-width:990px){.menu-toggle{display:block;margin-left:auto}.nav{display:none;position:absolute;top:76px;left:0;right:0;padding:18px 20px 30px;background:#190a14;border-bottom:1px solid #ffffff2e;box-shadow:0 16px 30px #0003;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav>a{padding:15px;border-bottom:1px solid #ffffff1b;font-size:14px}.nav .nav-primary{text-align:center;padding:16px;margin-top:18px}}
+@media (max-width:850px){.nav{top:76px}}
+@media (max-width:600px){.nav{top:84px}.kit-artframe{border-radius:8px}.kit-showcase{padding-top:28px}}
