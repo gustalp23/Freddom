@@ -235,3 +235,17 @@ body{background:var(--paper);overflow-x:hidden}
  .inscription-next{padding:24px}
  .inscription-next .btn{width:100%}
 }
+
+/* Formulário integrado: demonstração segura, separada das inscrições oficiais */
+.freedom-test-signup{background:linear-gradient(180deg,#fff,#f6ebf0)}
+.form-notice{border:1px solid #dab6c5;background:#fff5f8;border-left:5px solid #8b2748;padding:17px 21px;border-radius:15px;color:#5a2a3c;line-height:1.65;margin:0 0 23px}
+.form-notice strong{font-weight:900}
+.form-shell{border:1px solid #ddcbd3;border-radius:24px;background:white;box-shadow:0 23px 60px #34102018;overflow:hidden}
+.form-shell-bar{display:flex;gap:12px;align-items:center;background:#260c18;color:#fff;padding:17px 22px}
+.form-shell-bar strong{font-weight:800}
+.form-shell-bar span:last-child{margin-left:auto;color:#ddc7d0;font-size:.78rem}
+.form-shell-dot{width:11px;height:11px;border-radius:50%;background:#eab8ca;box-shadow:0 0 0 4px #eab8ca26;flex:none}
+.form-shell iframe{display:block;width:100%;height:930px;min-height:550px;border:0;background:#fff}
+.form-shell-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 24px;border-top:1px solid #e9dce2}
+.form-shell-footer p{color:#6c5961;margin:0}
+@media(max-width:680px){.form-shell{border-radius:15px}.form-shell iframe{height:1050px}.form-shell-bar{padding:14px 15px}.form-shell-footer{padding:16px;display:grid}.form-shell-footer .btn{width:100%}.form-notice{padding:15px;font-size:.9rem}}
