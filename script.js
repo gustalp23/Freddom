@@ -52,3 +52,20 @@ if (participantSearch) {
     message.textContent = 'A lista pública oficial de participantes não foi disponibilizada neste site. Consulte sua inscrição na plataforma oficial.';
   });
 }
+
+
+/* Melhorias de experiência e acessibilidade */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      if (menuButton) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = '☰ Menu';
+      }
+    }
+  });
+});
+document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+  img.addEventListener('error', () => { img.style.display = 'none'; });
+});
