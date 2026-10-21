@@ -17,7 +17,7 @@ h1,h2,h3,.brand-title{font-family:'Montserrat',sans-serif;letter-spacing:-.035em
 .nav-links a{transition:background .2s,transform .2s}
 .nav-links a:hover{transform:translateY(-1px)}
 .nav-links .nav-cta{border-radius:999px;padding:11px 17px}
-.hero{min-height:680px;background-image:linear-gradient(90deg,rgba(25,5,13,.92) 0%,rgba(46,8,24,.75) 45%,rgba(34,7,17,.18) 100%),url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=2200&q=90');background-position:center;background-size:cover}
+.hero{min-height:680px;background-image:linear-gradient(90deg,rgba(25,5,13,.92) 0%,rgba(46,8,24,.75) 45%,rgba(34,7,17,.18) 100%),url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=2200&q=90');background-position:center;background-size:cover}
 .hero:after{content:"";position:absolute;inset:auto 0 0;height:110px;background:linear-gradient(transparent,rgba(20,4,11,.22));z-index:-1}
 .hero-content{max-width:1240px;width:100%;padding:95px 32px}
 .eyebrow,.section-kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--wine2)}
@@ -45,7 +45,7 @@ h1,h2,h3,.brand-title{font-family:'Montserrat',sans-serif;letter-spacing:-.035em
 .card:hover{transform:translateY(-6px);box-shadow:0 22px 48px #32101b12}
 .card-icon{width:54px;height:54px;border-radius:17px;background:#f4e3e9;display:grid;place-items:center}
 .pill{border-radius:999px;letter-spacing:.04em}
-.photo-panel{min-height:480px;border-radius:26px;box-shadow:0 28px 65px #32101b22;background-image:linear-gradient(0deg,#27091440,transparent 55%),url('https://images.unsplash.com/photo-1533561052604-c3beb6d55b8d?auto=format&fit=crop&w=1200&q=85');background-size:cover;background-position:center}
+.photo-panel{min-height:480px;border-radius:26px;box-shadow:0 28px 65px #32101b22;background-image:linear-gradient(0deg,#27091440,transparent 55%),url('https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=1200&q=85');background-size:cover;background-position:center}
 .detail-list{gap:18px}
 .detail-list li{padding:16px 0;border-bottom:1px solid var(--line)}
 .faq{border-top:1px solid var(--line)}
