@@ -104,7 +104,7 @@
 @media(max-width:650px){.kit-premium-hero{padding:70px 0}.kit-premium-hero h1{font-size:clamp(69px,13vw,100px)}.kit-features{grid-template-columns:1fr}.kit-showcase{padding:24px 0}.kit-artframe{border-radius:3px}.kit-home{padding:48px 0}.kit-home-copy h2{font-size:clamp(60px,12vw,82px)}.kit-pickup-info{padding:35px}.kit-pickup-info>strong{font-size:95px}.kit-inline-cta .wrap,.kit-inline-cta .wrap>div{flex-direction:column;align-items:flex-start}.kit-inline-cta a{width:100%;text-align:center}}
 
 /* Banner de identidade visual da corrida, sem representação de igreja não verificada */
-.statement-photo{background:linear-gradient(90deg,rgba(22,0,9,.62),rgba(39,0,14,.32)),url('assets/freedom-banner.svg') center /cover no-repeat}
+.statement-photo{background:repeating-linear-gradient(169deg,transparent 0 176px,rgba(234,194,210,.09) 177px,transparent 180px),radial-gradient(ellipse at 73% 20%,#7f0a30 0%,#410015 48%,#1b000b 100%)}
 @media(max-width:650px){.statement-photo{background-position:center;background-size:cover}.statement-inner h2{font-size:clamp(63px,14vw,95px)}}
 
 /* Kit do atleta — imagem de apresentação em formato panorâmico */
@@ -215,3 +215,23 @@
 .registration-brand{display:flex;flex-wrap:wrap;align-items:center;gap:6px 15px;font-family:var(--body);font-style:normal}
 .registration-brand img{display:block;width:min(235px,90%);height:auto;object-fit:contain}
 .registration-brand span{font:800 17px var(--body);letter-spacing:.18em}
+
+
+/* 22/10/2026 — modalidades distintas e layout responsivo */
+.race-cards,.modality-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.race-card{padding:22px;min-height:435px}
+.race-distance{font-size:clamp(80px,8vw,112px)}
+.race-card h3{font-size:27px}
+.modality-card{padding:32px 23px;min-height:290px}
+.modality-card strong{font-size:clamp(80px,8vw,108px)}
+@media(max-width:1100px){
+  .race-cards,.modality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .race-distance{font-size:110px}
+  .modality-card strong{font-size:105px}
+}
+@media(max-width:650px){
+  .race-cards,.modality-grid{grid-template-columns:1fr}
+  .race-card{padding:26px;min-height:350px}
+  .race-distance{font-size:110px}
+  .modality-card strong{font-size:100px}
+}
